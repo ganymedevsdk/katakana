@@ -71,3 +71,8 @@ MIT License - Ver [LICENSE](LICENSE) para detalles.
 ---
 
 *Desarrollado para Nishi Nihongo Gakko 🇯🇵*
+
+## 🎨 Branding
+
+- Logo: `assets/images/logo.png`
+- Colores de marca: extraídos del logo (pendiente de definir paleta exacta)
