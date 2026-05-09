@@ -257,3 +257,4 @@ flutter pub add flutter_drawing_board  # canvas de dibujo
 3. **Extensibilidad** - mismo patrón para apps hiragana, kanji, vocabulario
 4. **Offline-first** - toda funcionalidad trabaja sin internet
 5. **Testing** - considerar Flutter tests para gamificación
+6. **Branding** - El logo está en `apps/assets/images/logo.png`. Extraer los colores del logo para definir la paleta de colores de la app (usar en MaterialTheme).
