@@ -88,6 +88,7 @@ Basado en investigación de apps exitosas (KanaMastery, Kana Conbini, HiraKana):
 3. **Reverse Mode** - Ver romaji → seleccionar carácter katakana
 4. **Speed Run** - Contra tiempo (contador)
 5. **Duel/Boss** - Desafíos especiales
+6. **Escribir Katakana** - Dibujar el carácter con el dedo + validación automática
 
 #### Sistema de Progresión
 
@@ -115,6 +116,33 @@ Basado en investigación de apps exitosas (KanaMastery, Kana Conbini, HiraKana):
 - Sonidos de feedback
 - Temas de recompensa (badges)
 
+### Modo Escritura (Draw Katakana)
+
+**Objetivo:** Enseñar el carácter y validar que el usuario lo dibuje correctamente.
+
+**Tecnología:** Google ML Kit Digital Ink Recognition
+
+| Paquete | Función |
+|---------|---------|
+| `digital_ink_recognition_mlkit` | Reconocimiento de escritura a mano |
+| `flutter_drawing_board` | Canvas interactivo para dibujar |
+
+**Flujo:**
+1. Mostrar katakana objetivo (ej: "ア")
+2. Usuario dibuja en canvas con el dedo
+3. Al presionar "Verificar":
+   - ML Kit reconoce lo dibujado (código: `ja`)
+   - Compara resultado con el katakana objetivo
+   - Muestra: ✅ Correcto / ❌ Intenta de nuevo
+4. Si incorrecto: mostrar guía visual del trazo
+
+**Características:**
+- ✅ Funciona offline (modelo ~20MB descargable)
+- ✅ Soporta japonés completo (katakana, hiragana, kanji)
+- ✅ Validación automática del trazo
+- ✅ Tiempo real (reconocimiento casi instantáneo)
+- ✅ 100% gratuito (Google ML Kit)
+
 ---
 
 ## 4. Funcionalidades Requeridas
@@ -127,6 +155,7 @@ Basado en investigación de apps exitosas (KanaMastery, Kana Conbini, HiraKana):
 | 🔴 Alta | Progreso Local | Guardar XP, niveles, rachas offline |
 | 🔴 Alta | Modo Práctica | Estudiar sin presión de estadísticas |
 | 🔴 Alta | Modo Quiz | Jugar con XP y niveles |
+| 🔴 Alta | Escribir Katakana | Dibujar caracteres + validación ML Kit |
 | 🟡 Media | Tabla de puntuación | Ver mejores puntuaciones |
 | 🟡 Media | Tracker de errores | Ver caracteres difíciles |
 | 🟢 Baja | Sonidos | Feedback auditivo |
@@ -178,6 +207,7 @@ locale: 'es' | 'en'  // Toggle desde menú configuración
 - [ ] Tabla de referencia katakana
 - [ ] Modo práctica (estudio libre)
 - [ ] Modo quiz básico (multiple choice)
+- [ ] Modo escribir katakana (canvas + ML Kit)
 
 ### Fase 3: Gamificación
 - [ ] Sistema XP
@@ -212,6 +242,10 @@ flutter pub add drift sqlite3_flutter_libs
 
 # UI/UX
 flutter pub add go_router  # navegación
+
+# Reconocimiento de escritura (ML Kit)
+flutter pub add digital_ink_recognition_mlkit
+flutter pub add flutter_drawing_board  # canvas de dibujo
 ```
 
 ---
