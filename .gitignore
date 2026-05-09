@@ -32,3 +32,14 @@ ENV/
 dist/
 build/
 out/
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.dart.snapshot
+.packages
+coverage/
+*.iml
+.pub-cache/
+.pub/

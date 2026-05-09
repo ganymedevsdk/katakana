@@ -42,12 +42,15 @@ Escuela de japonés dirigida por la profesora Elizabeth Ossandon.
 
 ## 📂 Estructura
 
+> **Nota:** Estructura planificada — actualmente solo existen `docs/` y `apps/assets/`.
+
 ```
 katakana/
 ├── apps/
-│   └── katakana-app/    # App de Katakana
+│   ├── assets/          # Assets compartidos (logo, etc.)
+│   └── katakana-app/    # App de Katakana (en desarrollo)
 ├── shared/
-│   └── core/            # Código compartido
+│   └── core/            # Código compartido (futuro)
 ├── docs/
 │   └── PLAN.md          # Plan del proyecto
 └── README.md
@@ -68,11 +71,13 @@ ls apps/
 
 MIT License - Ver [LICENSE](LICENSE) para detalles.
 
+
+
 ---
 
 *Desarrollado para Nishi Nihongo Gakko 🇯🇵*
 
 ## 🎨 Branding
 
-- Logo: `assets/images/logo.png`
+- Logo: `apps/assets/images/logo.png`
 - Colores de marca: extraídos del logo (pendiente de definir paleta exacta)

@@ -224,9 +224,9 @@ locale: 'es' | 'en'  // Toggle desde menú configuración
 
 ---
 
-## 7. Paquetes NPM/AutoSkills a Instalar
+## 7. Paquetes Flutter a Instalar
 
-Cuando se empieze a codear, ejecutar en `katakana-app/`:
+Cuando se empiece a codear, ejecutar en `katakana-app/`:
 
 ```bash
 # Core
