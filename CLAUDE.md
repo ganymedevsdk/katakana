@@ -22,20 +22,38 @@ Monorepo — primera app de una familia de apps de japonés (Hiragana, Kanji, Vo
 
 ## Estado actual
 
-- Fase de planificación — sin código Flutter todavía
-- Documentación completa en `docs/PLAN.md`
-- Logo en `apps/assets/images/logo.png`
-- Colores de marca: pendiente extraer del logo
+- Fase 1 y 2 completas — Flutter app funcional
+- Web: `flutter build web` → servir `build/web/` con `python -m http.server 8080`
+- Logo en `apps/assets/images/logo.png` y `apps/katakana_app/assets/images/logo.png`
+- Colores de marca: teal `#1A8E8F`, naranja `#B84815`
 
-## Arquitectura planificada
+## Arquitectura actual
 
 ```
 katakana/
 ├── apps/
-│   ├── assets/images/       # Assets compartidos
-│   └── katakana-app/        # Flutter app principal
+│   ├── assets/images/       # Assets compartidos (logo)
+│   └── katakana_app/        # Flutter app principal
+│       ├── lib/
+│       │   ├── main.dart
+│       │   ├── app.dart
+│       │   ├── core/
+│       │   │   ├── data/katakana_data.dart
+│       │   │   ├── database/app_database.dart
+│       │   │   ├── providers/
+│       │   │   └── theme/app_theme.dart
+│       │   ├── features/
+│       │   │   ├── home/
+│       │   │   ├── katakana_table/
+│       │   │   ├── practice/
+│       │   │   ├── quiz/
+│       │   │   ├── settings/
+│       │   │   └── write/
+│       │   ├── l10n/         # ES + EN
+│       │   └── router/
+│       └── pubspec.yaml
 ├── shared/
-│   └── core/                # Código compartido (futuro)
+│   └── core/                # Código compartido (futuro — Hiragana, Kanji...)
 ├── docs/PLAN.md
 ├── README.md
 └── LICENSE
