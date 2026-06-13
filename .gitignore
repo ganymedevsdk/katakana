@@ -43,3 +43,8 @@ coverage/
 *.iml
 .pub-cache/
 .pub/
+
+# === AI Agent ===
+.claude/
+CLAUDE.md
+skills-lock.json
